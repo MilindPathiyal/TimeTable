@@ -13,24 +13,45 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="QHn-A0-x6X">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.57117504080683057" green="1" blue="0.63462089902272067" alpha="1" colorSpace="calibratedRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7Eb-pZ-Hso">
-                            <size key="itemSize" width="156" height="145"/>
+                            <size key="itemSize" width="141" height="125"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
+                        <imageView key="backgroundView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cxs" id="e8D-KZ-Wer">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="aCF-PN-Pnp">
-                                <rect key="frame" x="0.0" y="64" width="156" height="145"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="aCF-PN-Pnp">
+                                <rect key="frame" x="0.0" y="0.0" width="141" height="125"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="156" height="145"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="141" height="125"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJP-Z6-Bjg">
+                                            <rect key="frame" x="0.0" y="0.0" width="141" height="125"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mYg-dG-yUL">
+                                            <rect key="frame" x="0.0" y="0.0" width="141" height="125"/>
+                                        </button>
+                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <connections>
-                                    <segue destination="Bnj-rh-TAm" kind="show" id="tUE-tL-BuE"/>
-                                </connections>
+                                <color key="backgroundColor" red="1" green="0.64937242616496715" blue="0.39779855940374331" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="fJP-Z6-Bjg" secondAttribute="trailing" id="JxO-eA-05Q"/>
+                                    <constraint firstItem="fJP-Z6-Bjg" firstAttribute="top" secondItem="aCF-PN-Pnp" secondAttribute="top" id="kKm-ON-UV7"/>
+                                    <constraint firstAttribute="bottom" secondItem="fJP-Z6-Bjg" secondAttribute="bottom" id="vPx-fU-ZFW"/>
+                                    <constraint firstItem="fJP-Z6-Bjg" firstAttribute="leading" secondItem="aCF-PN-Pnp" secondAttribute="leading" id="vdh-Eu-5Ls"/>
+                                </constraints>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -143,4 +164,7 @@
             <point key="canvasLocation" x="239" y="490"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cxs" width="960" height="720"/>
+    </resources>
 </document>
