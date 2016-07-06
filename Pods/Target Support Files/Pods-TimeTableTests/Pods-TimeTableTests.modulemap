@@ -1,6 +1,0 @@
-framework module Pods_TimeTableTests {
-  umbrella header "Pods-TimeTableTests-umbrella.h"
-
-  export *
-  module * { export * }
-}
