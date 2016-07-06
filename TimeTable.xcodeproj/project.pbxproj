@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2114CF8F73128178ED50F014 /* Pods_TimeTable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A498D4F77544EF3F7033999C /* Pods_TimeTable.framework */; };
+		9DC71EAC396FE9F566CAEDCD /* Pods_TimeTableTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD3183778E68008CFA44BD4 /* Pods_TimeTableTests.framework */; };
+		E8CC9A3C1F4C5A5C7B7EF116 /* Pods_TimeTableUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4337F5D7141292A09CCF1266 /* Pods_TimeTableUITests.framework */; };
 		F9BC77861D2D65E10039C415 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BC77851D2D65E10039C415 /* AppDelegate.swift */; };
 		F9BC77881D2D65E10039C415 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BC77871D2D65E10039C415 /* ViewController.swift */; };
 		F9BC778B1D2D65E10039C415 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9BC77891D2D65E10039C415 /* Main.storyboard */; };
@@ -34,6 +37,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0BD6C91A8A165D3F6400F84B /* Pods-TimeTable.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeTable.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TimeTable/Pods-TimeTable.debug.xcconfig"; sourceTree = "<group>"; };
+		276F9013B01F99A98B4C0412 /* Pods-TimeTableTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeTableTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TimeTableTests/Pods-TimeTableTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2DC5904D230400268F6CB965 /* Pods-TimeTableTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeTableTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TimeTableTests/Pods-TimeTableTests.release.xcconfig"; sourceTree = "<group>"; };
+		42A0FFC55AA1B48D8910014D /* Pods-TimeTableUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeTableUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TimeTableUITests/Pods-TimeTableUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4337F5D7141292A09CCF1266 /* Pods_TimeTableUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeTableUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6366A8B085EB20B4C1B7CEFD /* Pods-TimeTableUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeTableUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TimeTableUITests/Pods-TimeTableUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7DD3183778E68008CFA44BD4 /* Pods_TimeTableTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeTableTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A498D4F77544EF3F7033999C /* Pods_TimeTable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeTable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC9AF10CCBFA3253A4E3FB98 /* Pods-TimeTable.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeTable.release.xcconfig"; path = "Pods/Target Support Files/Pods-TimeTable/Pods-TimeTable.release.xcconfig"; sourceTree = "<group>"; };
 		F9BC77821D2D65E10039C415 /* TimeTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9BC77851D2D65E10039C415 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9BC77871D2D65E10039C415 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2114CF8F73128178ED50F014 /* Pods_TimeTable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DC71EAC396FE9F566CAEDCD /* Pods_TimeTableTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +82,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8CC9A3C1F4C5A5C7B7EF116 /* Pods_TimeTableUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F4BA4DAD46358EAB5725126 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0BD6C91A8A165D3F6400F84B /* Pods-TimeTable.debug.xcconfig */,
+				AC9AF10CCBFA3253A4E3FB98 /* Pods-TimeTable.release.xcconfig */,
+				276F9013B01F99A98B4C0412 /* Pods-TimeTableTests.debug.xcconfig */,
+				2DC5904D230400268F6CB965 /* Pods-TimeTableTests.release.xcconfig */,
+				6366A8B085EB20B4C1B7CEFD /* Pods-TimeTableUITests.debug.xcconfig */,
+				42A0FFC55AA1B48D8910014D /* Pods-TimeTableUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		78D0E2765175631CDE54E087 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A498D4F77544EF3F7033999C /* Pods_TimeTable.framework */,
+				7DD3183778E68008CFA44BD4 /* Pods_TimeTableTests.framework */,
+				4337F5D7141292A09CCF1266 /* Pods_TimeTableUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F9BC77791D2D65E10039C415 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +119,8 @@
 				F9BC77991D2D65E10039C415 /* TimeTableTests */,
 				F9BC77A41D2D65E10039C415 /* TimeTableUITests */,
 				F9BC77831D2D65E10039C415 /* Products */,
+				5F4BA4DAD46358EAB5725126 /* Pods */,
+				78D0E2765175631CDE54E087 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,9 +172,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F9BC77AA1D2D65E10039C415 /* Build configuration list for PBXNativeTarget "TimeTable" */;
 			buildPhases = (
+				0C746BD79C73643402D90F7E /* [CP] Check Pods Manifest.lock */,
 				F9BC777E1D2D65E10039C415 /* Sources */,
 				F9BC777F1D2D65E10039C415 /* Frameworks */,
 				F9BC77801D2D65E10039C415 /* Resources */,
+				1CC68920A6F111B1FA8AF26E /* [CP] Embed Pods Frameworks */,
+				028E53A3D3E747BB422C0BEC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +192,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F9BC77AD1D2D65E10039C415 /* Build configuration list for PBXNativeTarget "TimeTableTests" */;
 			buildPhases = (
+				134C34238066DE20000ED317 /* [CP] Check Pods Manifest.lock */,
 				F9BC77921D2D65E10039C415 /* Sources */,
 				F9BC77931D2D65E10039C415 /* Frameworks */,
 				F9BC77941D2D65E10039C415 /* Resources */,
+				4D6AE580AD840F83004E76F6 /* [CP] Embed Pods Frameworks */,
+				E6456949B9B87BEE6752CFE3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +213,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F9BC77B01D2D65E10039C415 /* Build configuration list for PBXNativeTarget "TimeTableUITests" */;
 			buildPhases = (
+				977F6AD585D8DD924D34A872 /* [CP] Check Pods Manifest.lock */,
 				F9BC779D1D2D65E10039C415 /* Sources */,
 				F9BC779E1D2D65E10039C415 /* Frameworks */,
 				F9BC779F1D2D65E10039C415 /* Resources */,
+				5D603870DE854293A46EE911 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -250,6 +298,129 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		028E53A3D3E747BB422C0BEC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TimeTable/Pods-TimeTable-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0C746BD79C73643402D90F7E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		134C34238066DE20000ED317 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		1CC68920A6F111B1FA8AF26E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TimeTable/Pods-TimeTable-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4D6AE580AD840F83004E76F6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TimeTableTests/Pods-TimeTableTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5D603870DE854293A46EE911 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TimeTableUITests/Pods-TimeTableUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		977F6AD585D8DD924D34A872 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E6456949B9B87BEE6752CFE3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TimeTableTests/Pods-TimeTableTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F9BC777E1D2D65E10039C415 /* Sources */ = {
@@ -397,6 +568,7 @@
 		};
 		F9BC77AB1D2D65E10039C415 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BD6C91A8A165D3F6400F84B /* Pods-TimeTable.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TimeTable/Info.plist;
@@ -408,6 +580,7 @@
 		};
 		F9BC77AC1D2D65E10039C415 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC9AF10CCBFA3253A4E3FB98 /* Pods-TimeTable.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TimeTable/Info.plist;
@@ -419,6 +592,7 @@
 		};
 		F9BC77AE1D2D65E10039C415 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 276F9013B01F99A98B4C0412 /* Pods-TimeTableTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = TimeTableTests/Info.plist;
@@ -431,6 +605,7 @@
 		};
 		F9BC77AF1D2D65E10039C415 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2DC5904D230400268F6CB965 /* Pods-TimeTableTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = TimeTableTests/Info.plist;
@@ -443,6 +618,7 @@
 		};
 		F9BC77B11D2D65E10039C415 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6366A8B085EB20B4C1B7CEFD /* Pods-TimeTableUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = TimeTableUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -454,6 +630,7 @@
 		};
 		F9BC77B21D2D65E10039C415 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42A0FFC55AA1B48D8910014D /* Pods-TimeTableUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = TimeTableUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -482,6 +659,7 @@
 				F9BC77AC1D2D65E10039C415 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F9BC77AD1D2D65E10039C415 /* Build configuration list for PBXNativeTarget "TimeTableTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +668,7 @@
 				F9BC77AF1D2D65E10039C415 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F9BC77B01D2D65E10039C415 /* Build configuration list for PBXNativeTarget "TimeTableUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +677,7 @@
 				F9BC77B21D2D65E10039C415 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
