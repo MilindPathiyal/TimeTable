@@ -6,6 +6,7 @@ target 'TimeTable' do
   use_frameworks!
 
   # Pods for TimeTable
+  pod 'M13Checkbox'
 
   target 'TimeTableTests' do
     inherit! :search_paths
