@@ -19,31 +19,31 @@ class DayTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("launched")
         //tasks = RealmHelper.retrieveNotes()
     }
     
     // 1
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //return 10
-        return tasks.count
+        return 10
+        //return tasks.count
     }
     
     
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        //        let cell = tableView.dequeueReusableCellWithIdentifier("listNotesTableViewCell", forIndexPath: indexPath)
-        //        cell.textLabel?.text = "Yay - it's working!"
-        //        return cell
+        let cell = tableView.dequeueReusableCellWithIdentifier("listNotesTableViewCell", forIndexPath: indexPath)
+        cell.textLabel?.text = "Yay - it's working!"
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("listTasksTableViewCell", forIndexPath: indexPath) as! ListTasksTableViewCell
+        //let cell = tableView.dequeueReusableCellWithIdentifier("listTasksTableViewCell", forIndexPath: indexPath) as! ListTasksTableViewCell
         
         //        cell.noteTitleLabel.text = "note's title"
         //        cell.noteModificationTimeLabel.text = "note's modification time"
         //        return cell
         
-        let row = indexPath.row
+        //let row = indexPath.row
         
-        let task = tasks[row]
+        //let task = tasks[row]
         
         //cell.noteTitleLabel.text = note.title
         
@@ -60,14 +60,10 @@ class DayTableViewController: UITableViewController {
             if identifier == "displayNote" {
                 print("Table view cell tapped")
                 
-//                // 1
-//                let indexPath = tableView.indexPathForSelectedRow!
-//                // 2
-//                let note = notes[indexPath.row]
-//                // 3
-//                let displayNoteViewController = segue.destinationViewController as! DisplayNoteViewController
-//                // 4
-//                displayNoteViewController.note = note
+                //                let indexPath = tableView.indexPathForSelectedRow!
+                //                let note = notes[indexPath.row]
+                //                let displayNoteViewController = segue.destinationViewController as! DisplayNoteViewController
+                //                displayNoteViewController.note = note
                 
             } else if identifier == "addNote" {
                 print("+ button tapped")
@@ -91,5 +87,5 @@ class DayTableViewController: UITableViewController {
             //notes = RealmHelper.retrieveNotes()
         }
     }
-
+    
 }

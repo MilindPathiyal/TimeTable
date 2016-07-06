@@ -14,7 +14,11 @@ class CollectionViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        performSegueWithIdentifier("showDayTasks", sender: nil)
+
         Array = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday", "[INSERT JOKE]"]
+
         // Do any additional setup after loading the view, typically from a nib.
     }
 
