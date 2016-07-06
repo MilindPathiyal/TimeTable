@@ -11,15 +11,15 @@
 		9DC71EAC396FE9F566CAEDCD /* Pods_TimeTableTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD3183778E68008CFA44BD4 /* Pods_TimeTableTests.framework */; };
 		E8CC9A3C1F4C5A5C7B7EF116 /* Pods_TimeTableUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4337F5D7141292A09CCF1266 /* Pods_TimeTableUITests.framework */; };
 		F9BC77861D2D65E10039C415 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BC77851D2D65E10039C415 /* AppDelegate.swift */; };
-		F9BC77881D2D65E10039C415 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BC77871D2D65E10039C415 /* ViewController.swift */; };
 		F9BC778B1D2D65E10039C415 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9BC77891D2D65E10039C415 /* Main.storyboard */; };
 		F9BC778D1D2D65E10039C415 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9BC778C1D2D65E10039C415 /* Assets.xcassets */; };
 		F9BC77901D2D65E10039C415 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9BC778E1D2D65E10039C415 /* LaunchScreen.storyboard */; };
 		F9BC779B1D2D65E10039C415 /* TimeTableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BC779A1D2D65E10039C415 /* TimeTableTests.swift */; };
 		F9BC77A61D2D65E10039C415 /* TimeTableUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BC77A51D2D65E10039C415 /* TimeTableUITests.swift */; };
-		FAD862211D2D75DA00626DC7 /* DayTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD862201D2D75DA00626DC7 /* DayTableViewController.swift */; };
+		F9BC77B81D2DAE820039C415 /* ListTasksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE322BD1D2D80140058786D /* ListTasksTableViewCell.swift */; };
+		F9BC77BA1D2DAEF20039C415 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BC77871D2D65E10039C415 /* ViewController.swift */; };
+		F9BC77BB1D2DAEF40039C415 /* DayTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD862201D2D75DA00626DC7 /* DayTableViewController.swift */; };
 		FAE322B81D2D77A90058786D /* DayTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE322B71D2D77A90058786D /* DayTask.swift */; };
-		FAE322BE1D2D80140058786D /* ListTasksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE322BD1D2D80140058786D /* ListTasksTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +51,7 @@
 		AC9AF10CCBFA3253A4E3FB98 /* Pods-TimeTable.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeTable.release.xcconfig"; path = "Pods/Target Support Files/Pods-TimeTable/Pods-TimeTable.release.xcconfig"; sourceTree = "<group>"; };
 		F9BC77821D2D65E10039C415 /* TimeTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9BC77851D2D65E10039C415 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F9BC77871D2D65E10039C415 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
+		F9BC77871D2D65E10039C415 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F9BC778A1D2D65E10039C415 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F9BC778C1D2D65E10039C415 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F9BC778F1D2D65E10039C415 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -62,7 +62,7 @@
 		F9BC77A11D2D65E10039C415 /* TimeTableUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeTableUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9BC77A51D2D65E10039C415 /* TimeTableUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableUITests.swift; sourceTree = "<group>"; };
 		F9BC77A71D2D65E10039C415 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FAD862201D2D75DA00626DC7 /* DayTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DayTableViewController.swift; path = ../DayTableViewController.swift; sourceTree = "<group>"; };
+		FAD862201D2D75DA00626DC7 /* DayTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayTableViewController.swift; sourceTree = "<group>"; };
 		FAE322B71D2D77A90058786D /* DayTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayTask.swift; sourceTree = "<group>"; };
 		FAE322BD1D2D80140058786D /* ListTasksTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTasksTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -460,11 +460,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9BC77881D2D65E10039C415 /* ViewController.swift in Sources */,
+				F9BC77BB1D2DAEF40039C415 /* DayTableViewController.swift in Sources */,
+				F9BC77BA1D2DAEF20039C415 /* ViewController.swift in Sources */,
+				F9BC77B81D2DAE820039C415 /* ListTasksTableViewCell.swift in Sources */,
 				FAE322B81D2D77A90058786D /* DayTask.swift in Sources */,
 				F9BC77861D2D65E10039C415 /* AppDelegate.swift in Sources */,
-				FAD862211D2D75DA00626DC7 /* DayTableViewController.swift in Sources */,
-				FAE322BE1D2D80140058786D /* ListTasksTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

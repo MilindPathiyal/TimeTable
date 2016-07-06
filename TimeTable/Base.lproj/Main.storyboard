@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Collection View Controller-->
+        <!--Time Table-->
         <scene sceneID="aZJ-lp-Yjo">
             <objects>
                 <collectionViewController id="Izz-I6-ZFp" customClass="CollectionViewController" customModule="TimeTable" customModuleProvider="target" sceneMemberID="viewController">
@@ -20,12 +20,12 @@
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
-                        <imageView key="backgroundView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cxs" id="e8D-KZ-Wer">
+                        <imageView key="backgroundView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-1142632_960_720" id="e8D-KZ-Wer">
                             <rect key="frame" x="0.0" y="-64" width="600" height="600"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="aCF-PN-Pnp">
+                            <collectionViewCell clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="center" reuseIdentifier="cell" id="aCF-PN-Pnp">
                                 <rect key="frame" x="0.0" y="64" width="141" height="125"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -40,12 +40,15 @@
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mYg-dG-yUL">
                                             <rect key="frame" x="0.0" y="0.0" width="141" height="125"/>
+                                            <connections>
+                                                <segue destination="Bnj-rh-TAm" kind="show" id="hpd-wG-YXs"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <color key="backgroundColor" red="1" green="0.64937242616496715" blue="0.39779855940374331" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.79691386222839355" green="0.28462415933609009" blue="0.30272704362869263" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="fJP-Z6-Bjg" secondAttribute="trailing" id="JxO-eA-05Q"/>
                                     <constraint firstItem="fJP-Z6-Bjg" firstAttribute="top" secondItem="aCF-PN-Pnp" secondAttribute="top" id="kKm-ON-UV7"/>
@@ -53,7 +56,7 @@
                                     <constraint firstItem="fJP-Z6-Bjg" firstAttribute="leading" secondItem="aCF-PN-Pnp" secondAttribute="leading" id="vdh-Eu-5Ls"/>
                                 </constraints>
                                 <connections>
-                                    <segue destination="Bnj-rh-TAm" kind="show" identifier="showDayTasks" id="MWl-GS-f4F"/>
+                                    <segue destination="Bnj-rh-TAm" kind="show" identifier="showDayTasks" id="tUE-tL-BuE"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -62,7 +65,7 @@
                             <outlet property="delegate" destination="Izz-I6-ZFp" id="ZYG-4b-J3c"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="oKg-cJ-9St"/>
+                    <navigationItem key="navigationItem" title="Time Table" id="oKg-cJ-9St"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4o7-rD-7qO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -155,13 +158,35 @@
                                 <segue destination="NPB-Bz-MQG" kind="unwind" identifier="Back" unwindAction="unwindToListNotesViewController:" id="8g2-Mh-qYl"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="wfa-0m-xVB"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="wfa-0m-xVB">
+                            <connections>
+                                <segue destination="S2p-yK-wv5" kind="show" id="H4D-np-wBD"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="duh-5r-UyY" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="NPB-Bz-MQG" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1835" y="490"/>
+            <point key="canvasLocation" x="1691" y="490"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="b9z-NV-a1D">
+            <objects>
+                <viewController id="S2p-yK-wv5" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aiA-QU-wB5"/>
+                        <viewControllerLayoutGuide type="bottom" id="acX-1x-beB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="a8m-Aw-EZa">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OOS-aw-XdO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1691" y="1317"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NXn-J6-IgS">
@@ -183,6 +208,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="cxs" width="960" height="720"/>
+        <image name="background-1142632_960_720" width="960" height="720"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="tUE-tL-BuE"/>
+    </inferredMetricsTieBreakers>
 </document>
