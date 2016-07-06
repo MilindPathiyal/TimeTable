@@ -14,11 +14,8 @@ class CollectionViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-<<<<<<< HEAD
         performSegueWithIdentifier("showDayTasks", sender: nil)
-=======
         Array = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday", "[INSERT JOKE]"]
->>>>>>> 194e01a1ba2794693acdaaf35e26ec949aa0bad0
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -39,6 +36,15 @@ class CollectionViewController: UICollectionViewController {
         return cell
     }
 
+    
+    @IBAction func unwindToListNotesViewController(segue: UIStoryboardSegue) {
+        if let identifier = segue.identifier {
+            if identifier == "Back" {
+                print("Back")
+            }
+        }
+        
+    }
 
 }
 
