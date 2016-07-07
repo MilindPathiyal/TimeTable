@@ -150,6 +150,7 @@
                                                 <constraint firstItem="Lw1-wY-M40" firstAttribute="centerY" secondItem="hNM-a3-H2k" secondAttribute="centerY" id="ph3-vb-3EI"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="0.99563743034828034" blue="0.9599181079937994" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="taskCheckbox" destination="Lw1-wY-M40" id="i0F-iN-7xw"/>
                                             <outlet property="taskTitleLabel" destination="S9f-OV-zvL" id="sfi-0p-n3C"/>
@@ -175,13 +176,15 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="DayNameSpace" id="Wgd-zS-Vnz">
+                    <navigationItem key="navigationItem" title="DayNameSpace" id="Wgd-zS-Vnz" colorLabel="IBBuiltInLabel-Red">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="5gR-0i-5lf">
+                            <color key="tintColor" red="0.74117647060000003" green="0.20000000000000001" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="NPB-Bz-MQG" kind="unwind" identifier="Back" unwindAction="unwindToListNotesViewController:" id="8g2-Mh-qYl"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="wfa-0m-xVB">
+                            <color key="tintColor" red="0.74117647060000003" green="0.20000000000000001" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="S2p-yK-wv5" kind="show" id="H4D-np-wBD"/>
                             </connections>
@@ -205,24 +208,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wL7-Mi-52T">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" allowsEditingTextAttributes="YES" placeholder="TITLE" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wL7-Mi-52T">
                                 <rect key="frame" x="154" y="84" width="292" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.97629265649743591" blue="0.95801478665117779" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="292" id="aSx-g5-1bz"/>
+                                    <constraint firstAttribute="width" constant="292" id="aSx-g5-1bz" userLabel="width = 200"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <action selector="didEndOnExit:" destination="S2p-yK-wv5" eventType="editingDidEndOnExit" id="H7k-xm-arN"/>
                                     <action selector="textFieldDidEndEditing:" destination="S2p-yK-wv5" eventType="editingDidEnd" id="4VA-9u-tnz"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DeE-9c-24l">
-                                <rect key="frame" x="20" y="84" width="38" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="3zq-eL-gXU">
                                 <rect key="frame" x="154" y="134" width="292" height="176"/>
                                 <constraints>
@@ -253,48 +251,65 @@
                                     <!--2037-12-31 11:00:00 +0000-->
                                 </date>
                             </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time End:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gje-LZ-8XZ">
-                                <rect key="frame" x="20" y="370" width="77" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gje-LZ-8XZ">
+                                <rect key="frame" x="20" y="370" width="104" height="31"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Time End:">
+                                        <attributes>
+                                            <color key="NSColor" red="0.74117647060000003" green="0.20000000000000001" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="18" name="Futura-CondensedExtraBold"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JDO-LB-KH7">
-                                <rect key="frame" x="0.0" y="0.0" width="171" height="30"/>
-                                <state key="normal" title="Click Here For Color Flag"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Start:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Na6-Jv-lxq">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Na6-Jv-lxq">
                                 <rect key="frame" x="20" y="134" width="85" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Time Start:">
+                                        <attributes>
+                                            <color key="NSColor" red="0.74117647060000003" green="0.20000000000000001" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="17" name="Futura-CondensedExtraBold"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wd3-8v-ulv">
-                                <rect key="frame" x="258" y="538" width="85" height="42"/>
-                                <state key="normal" title="Color Flag"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wd3-8v-ulv">
+                                <rect key="frame" x="260" y="557" width="80" height="35"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Color Flag">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="Futura-CondensedExtraBold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
                                 <connections>
                                     <segue destination="6pL-q2-9mx" kind="show" id="17K-2k-5Fr"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="3-f" translatesAutoresizingMaskIntoConstraints="NO" id="SNa-41-fOi">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="3-f" translatesAutoresizingMaskIntoConstraints="NO" id="TRJ-TP-H4r">
+                                <rect key="frame" x="0.0" y="64" width="600" height="620"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="DeE-9c-24l" firstAttribute="leading" secondItem="a8m-Aw-EZa" secondAttribute="leadingMargin" id="0DB-uj-Umc"/>
+                            <constraint firstItem="acX-1x-beB" firstAttribute="top" secondItem="wd3-8v-ulv" secondAttribute="bottom" constant="8" id="1d5-yI-5H2"/>
+                            <constraint firstItem="acX-1x-beB" firstAttribute="top" secondItem="wd3-8v-ulv" secondAttribute="bottom" constant="100" id="3d6-Xo-bbi"/>
                             <constraint firstItem="Na6-Jv-lxq" firstAttribute="leading" secondItem="a8m-Aw-EZa" secondAttribute="leadingMargin" id="7Hf-kg-6Zb"/>
-                            <constraint firstItem="Na6-Jv-lxq" firstAttribute="top" secondItem="DeE-9c-24l" secondAttribute="bottom" constant="29" id="AVj-1g-9pb"/>
-                            <constraint firstItem="wd3-8v-ulv" firstAttribute="centerX" secondItem="a8m-Aw-EZa" secondAttribute="centerX" id="Cmf-fd-Shz"/>
+                            <constraint firstItem="wd3-8v-ulv" firstAttribute="leading" secondItem="a8m-Aw-EZa" secondAttribute="leadingMargin" constant="210" id="BuG-qh-e5Y"/>
                             <constraint firstItem="wL7-Mi-52T" firstAttribute="top" secondItem="aiA-QU-wB5" secondAttribute="bottom" constant="20" id="Hmo-Tb-CRg"/>
-                            <constraint firstItem="DeE-9c-24l" firstAttribute="top" secondItem="aiA-QU-wB5" secondAttribute="bottom" constant="20" id="IQL-yr-9ia"/>
                             <constraint firstItem="3zq-eL-gXU" firstAttribute="top" secondItem="wL7-Mi-52T" secondAttribute="bottom" constant="20" id="M3C-bE-Mh3"/>
                             <constraint firstItem="Gje-LZ-8XZ" firstAttribute="leading" secondItem="a8m-Aw-EZa" secondAttribute="leadingMargin" id="P1b-Yl-WZY"/>
                             <constraint firstItem="Gje-LZ-8XZ" firstAttribute="top" secondItem="Na6-Jv-lxq" secondAttribute="bottom" constant="215" id="YT6-34-HJ8"/>
                             <constraint firstItem="3zq-eL-gXU" firstAttribute="centerX" secondItem="a8m-Aw-EZa" secondAttribute="centerX" id="bHm-5w-DLn"/>
+                            <constraint firstItem="acX-1x-beB" firstAttribute="top" secondItem="wd3-8v-ulv" secondAttribute="bottom" constant="400" id="i62-a7-ioH"/>
                             <constraint firstItem="Sd3-2P-pbz" firstAttribute="top" secondItem="3zq-eL-gXU" secondAttribute="bottom" constant="20" id="nef-Hd-KkC"/>
                             <constraint firstItem="wL7-Mi-52T" firstAttribute="centerX" secondItem="a8m-Aw-EZa" secondAttribute="centerX" id="u7K-Rw-xNg"/>
-                            <constraint firstItem="wd3-8v-ulv" firstAttribute="top" secondItem="Sd3-2P-pbz" secondAttribute="bottom" constant="30" id="xzg-8g-3c9"/>
+                            <constraint firstItem="wd3-8v-ulv" firstAttribute="leading" secondItem="a8m-Aw-EZa" secondAttribute="leadingMargin" constant="240" id="wLV-ek-3Nm"/>
                             <constraint firstItem="Sd3-2P-pbz" firstAttribute="centerX" secondItem="a8m-Aw-EZa" secondAttribute="centerX" id="yNd-Ue-BfH"/>
                         </constraints>
                     </view>
@@ -317,23 +332,61 @@
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xsM-WL-QLQ">
                                 <rect key="frame" x="0.0" y="485" width="600" height="115"/>
-                                <color key="backgroundColor" red="0.27177434959208591" green="0.51813091259604549" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SUI-Fk-qwn">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="115"/>
+                                        <state key="normal" title="BLUE Button">
+                                            <color key="titleColor" red="1" green="0.99563743029999996" blue="0.95991810799999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.63817803047413124" green="0.80515448902506992" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LO5-Gq-avR">
                                 <rect key="frame" x="0.0" y="64" width="600" height="107"/>
-                                <color key="backgroundColor" red="1" green="0.3199042204001652" blue="0.27049258455320968" alpha="1" colorSpace="calibratedRGB"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcG-pa-1iW">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="107"/>
+                                        <state key="normal" title="RED Button">
+                                            <color key="titleColor" red="1" green="0.99563743029999996" blue="0.95991810799999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.43483577600029732" blue="0.42931353158547825" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BxW-iN-KxR">
                                 <rect key="frame" x="0.0" y="169" width="600" height="107"/>
-                                <color key="backgroundColor" red="1" green="0.45395428432019569" blue="0.19395885551457837" alpha="1" colorSpace="calibratedRGB"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2bU-s6-EiW">
+                                        <rect key="frame" x="-56" y="-140" width="712" height="386"/>
+                                        <state key="normal" title="ORANGE Button"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.59483597382971531" blue="0.39902696181132091" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zk9-12-Gtb">
                                 <rect key="frame" x="0.0" y="275" width="600" height="107"/>
-                                <color key="backgroundColor" red="1" green="0.77887680546529314" blue="0.15812454500085271" alpha="1" colorSpace="calibratedRGB"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z30-pA-RSO">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="107"/>
+                                        <state key="normal" title="YELLOW Button">
+                                            <color key="titleColor" red="1" green="0.99563743029999996" blue="0.95991810799999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.84259692536149111" blue="0.45481548309197084" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t1K-1V-Ccx">
                                 <rect key="frame" x="0.0" y="380" width="600" height="107"/>
-                                <color key="backgroundColor" red="0.48154443470000002" green="1" blue="0.37329088960000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DzA-Yq-DlF">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="107"/>
+                                        <state key="normal" title="GREEN Button">
+                                            <color key="titleColor" red="1" green="0.99563743029999996" blue="0.95991810799999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.7248175083866194" green="1" blue="0.54940333191016966" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
