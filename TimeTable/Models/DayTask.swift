@@ -11,8 +11,21 @@ import UIKit
 import RealmSwift
 
 class DayTask: Object {
-    var isChecked = false
-    var title = ""
-    var startTime = ""
-    var color = CGFloat(100)/255
+    dynamic var day = Day.Monday.rawValue
+    var dayEnum: Day {
+        get {
+            return Day(rawValue: day)!
+        }
+        set {
+            day = newValue.rawValue
+        }
+    }
+    dynamic var isChecked = false
+    dynamic var title = ""
+    dynamic var startTime = NSDate()
+    dynamic var color = CGFloat(100)/255
+}
+
+enum Day: String {
+    case Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
 }

@@ -7,35 +7,29 @@
 //
 
 import UIKit
+import RealmSwift
 
 class DayTableViewController: UIViewController {
+    @IBOutlet weak var tableView: UITableView!
     var dayTitle = ""
-//    var tasks = [DayTask]{
-//        // add property observer
-//        didSet {
-//            //tableView.reloadData()
-//        }
-//    }
+    var tempDayEnum = Day(rawValue:"Monday")!
+    var tasks: Results<DayTask>!{
+        // add property observer
+        didSet {
+            tableView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = dayTitle
-        //tasks = RealmHelper.retrieveNotes()
+        tempDayEnum = Day(rawValue:dayTitle)!
+        tasks = RealmHelper.retrieveTask(tempDayEnum)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let identifier = segue.identifier {
-            if identifier == "" {
-                print("Table view cell tapped")
                 
-                //                let indexPath = tableView.indexPathForSelectedRow!
-                //                let note = notes[indexPath.row]
-                //                let displayNoteViewController = segue.destinationViewController as! DisplayNoteViewController
-                //                displayNoteViewController.note = note
-                
-            } else if identifier == "addNote" {
-                print("+ button tapped")
-            }
         }
     }
     
@@ -44,38 +38,35 @@ class DayTableViewController: UIViewController {
 extension DayTableViewController: UITableViewDataSource {
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
-        //return tasks.count
+        return tasks.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("listTasksTableViewCell", forIndexPath: indexPath) as! ListTasksTableViewCell
         
-        cell.taskTitleLabel.text = "Task"
+        //cell.taskTitleLabel.text = "Task"
         cell.taskCheckbox.animationDuration = NSTimeInterval(Float(0.3))
         
-        //        cell.noteTitleLabel.text = "note's title"
-        //        cell.noteModificationTimeLabel.text = "note's modification time"
-        //        return cell
+        let row = indexPath.row
         
-        //let row = indexPath.row
+        let task = tasks[row]
         
-        //let task = tasks[row]
+        cell.taskTitleLabel.text = task.title
         
-        //cell.noteTitleLabel.text = note.title
-        
-        //cell.noteModificationTimeLabel.text = note.modificationTime.convertToString()
+        if task.isChecked{
+            cell.taskCheckbox.setCheckState(.Checked, animated: true)
+        } else {
+            cell.taskCheckbox.setCheckState(.Unchecked, animated: true)
+        }
+        cell.taskStartTimeLabel.text = task.startTime.convertToString()
         
         return cell
     }
     
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
-            //            notes.removeAtIndex(indexPath.row)
-            //            tableView.reloadData()
-            
-            //RealmHelper.deleteNote(notes[indexPath.row])
-            //notes = RealmHelper.retrieveNotes()
+            RealmHelper.deleteTask(tasks[indexPath.row])
+            tasks = RealmHelper.retrieveTask(tempDayEnum)
         }
     }
 }

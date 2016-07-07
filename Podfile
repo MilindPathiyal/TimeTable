@@ -8,6 +8,7 @@ target 'TimeTable' do
   # Pods for TimeTable
   pod 'M13Checkbox'
   pod 'RealmSwift’
+  pod 'IQKeyboardManager'
 
   target 'TimeTableTests' do
     inherit! :search_paths

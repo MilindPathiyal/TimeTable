@@ -113,8 +113,19 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background-1142632_960_720" translatesAutoresizingMaskIntoConstraints="NO" id="SSw-3k-QEx">
+                                                    <rect key="frame" x="0.0" y="-47" width="612" height="128"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aLf-ve-YyF" userLabel="Task StartTime Label">
+                                                    <rect key="frame" x="550" y="18" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="aLf-ve-YyF" firstAttribute="trailing" secondItem="hNM-a3-H2k" secondAttribute="trailingMargin" id="8hK-nW-wiO"/>
+                                                <constraint firstItem="aLf-ve-YyF" firstAttribute="centerY" secondItem="hNM-a3-H2k" secondAttribute="centerY" id="Eoe-Pj-i50"/>
                                                 <constraint firstItem="S9f-OV-zvL" firstAttribute="centerY" secondItem="hNM-a3-H2k" secondAttribute="centerY" id="Hmw-qS-7cW"/>
                                                 <constraint firstItem="S9f-OV-zvL" firstAttribute="leading" secondItem="Lw1-wY-M40" secondAttribute="trailing" constant="9" id="lNn-88-hj5"/>
                                                 <constraint firstItem="Lw1-wY-M40" firstAttribute="leading" secondItem="hNM-a3-H2k" secondAttribute="leadingMargin" id="oVx-d6-cFD"/>
@@ -122,8 +133,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="taskCheckbox" destination="Lw1-wY-M40" id="i0F-iN-7xw"/>
-                                            <outlet property="taskTitleLabel" destination="S9f-OV-zvL" id="sfi-0p-n3C"/>
+                                            <outlet property="taskCheckbox" destination="Lw1-wY-M40" id="WOk-VS-8s1"/>
+                                            <outlet property="taskStartTimeLabel" destination="aLf-ve-YyF" id="Kax-ls-HAA"/>
+                                            <outlet property="taskTitleLabel" destination="S9f-OV-zvL" id="lxs-Ld-lkQ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -154,20 +166,23 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="wfa-0m-xVB">
                             <connections>
-                                <segue destination="S2p-yK-wv5" kind="show" id="H4D-np-wBD"/>
+                                <segue destination="S2p-yK-wv5" kind="show" identifier="addTask" id="H4D-np-wBD"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="0SG-UL-zya" id="xth-Wa-IQD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="duh-5r-UyY" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="NPB-Bz-MQG" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1691" y="490"/>
         </scene>
-        <!--View Controller-->
+        <!--Title-->
         <scene sceneID="b9z-NV-a1D">
             <objects>
-                <viewController id="S2p-yK-wv5" sceneMemberID="viewController">
+                <viewController id="S2p-yK-wv5" customClass="NewEventViewController" customModule="TimeTable" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aiA-QU-wB5"/>
                         <viewControllerLayoutGuide type="bottom" id="acX-1x-beB"/>
@@ -175,10 +190,98 @@
                     <view key="view" contentMode="scaleToFill" id="a8m-Aw-EZa">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wL7-Mi-52T">
+                                <rect key="frame" x="154" y="84" width="292" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="292" id="aSx-g5-1bz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="didEndOnExit:" destination="S2p-yK-wv5" eventType="editingDidEndOnExit" id="H7k-xm-arN"/>
+                                    <action selector="textFieldDidEndEditing:" destination="S2p-yK-wv5" eventType="editingDidEnd" id="4VA-9u-tnz"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DeE-9c-24l">
+                                <rect key="frame" x="20" y="84" width="38" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="3zq-eL-gXU">
+                                <rect key="frame" x="154" y="134" width="292" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="292" id="dS7-M5-01W"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="489539863.65446401">
+                                    <!--2016-07-06 23:17:43 +0000-->
+                                </date>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="-978267600">
+                                    <!--1970-01-01 11:00:00 +0000-->
+                                </date>
+                                <date key="maximumDate" timeIntervalSinceReferenceDate="1167562800">
+                                    <!--2037-12-31 11:00:00 +0000-->
+                                </date>
+                            </datePicker>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Sd3-2P-pbz">
+                                <rect key="frame" x="154" y="370" width="292" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="292" id="xrj-JP-yLr"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="489539863.65446401">
+                                    <!--2016-07-06 23:17:43 +0000-->
+                                </date>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="-978267600">
+                                    <!--1970-01-01 11:00:00 +0000-->
+                                </date>
+                                <date key="maximumDate" timeIntervalSinceReferenceDate="1167562800">
+                                    <!--2037-12-31 11:00:00 +0000-->
+                                </date>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time End:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gje-LZ-8XZ">
+                                <rect key="frame" x="20" y="370" width="77" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JDO-LB-KH7">
+                                <rect key="frame" x="0.0" y="0.0" width="171" height="30"/>
+                                <state key="normal" title="Click Here For Color Flag"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Start:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Na6-Jv-lxq">
+                                <rect key="frame" x="20" y="134" width="85" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DeE-9c-24l" firstAttribute="leading" secondItem="a8m-Aw-EZa" secondAttribute="leadingMargin" id="0DB-uj-Umc"/>
+                            <constraint firstItem="Na6-Jv-lxq" firstAttribute="leading" secondItem="a8m-Aw-EZa" secondAttribute="leadingMargin" id="7Hf-kg-6Zb"/>
+                            <constraint firstItem="Na6-Jv-lxq" firstAttribute="top" secondItem="DeE-9c-24l" secondAttribute="bottom" constant="29" id="AVj-1g-9pb"/>
+                            <constraint firstItem="wL7-Mi-52T" firstAttribute="top" secondItem="aiA-QU-wB5" secondAttribute="bottom" constant="20" id="Hmo-Tb-CRg"/>
+                            <constraint firstItem="DeE-9c-24l" firstAttribute="top" secondItem="aiA-QU-wB5" secondAttribute="bottom" constant="20" id="IQL-yr-9ia"/>
+                            <constraint firstItem="3zq-eL-gXU" firstAttribute="top" secondItem="wL7-Mi-52T" secondAttribute="bottom" constant="20" id="M3C-bE-Mh3"/>
+                            <constraint firstItem="Gje-LZ-8XZ" firstAttribute="leading" secondItem="a8m-Aw-EZa" secondAttribute="leadingMargin" id="P1b-Yl-WZY"/>
+                            <constraint firstItem="Gje-LZ-8XZ" firstAttribute="top" secondItem="Na6-Jv-lxq" secondAttribute="bottom" constant="215" id="YT6-34-HJ8"/>
+                            <constraint firstItem="3zq-eL-gXU" firstAttribute="centerX" secondItem="a8m-Aw-EZa" secondAttribute="centerX" id="bHm-5w-DLn"/>
+                            <constraint firstItem="Sd3-2P-pbz" firstAttribute="top" secondItem="3zq-eL-gXU" secondAttribute="bottom" constant="20" id="nef-Hd-KkC"/>
+                            <constraint firstItem="wL7-Mi-52T" firstAttribute="centerX" secondItem="a8m-Aw-EZa" secondAttribute="centerX" id="u7K-Rw-xNg"/>
+                            <constraint firstItem="Sd3-2P-pbz" firstAttribute="centerX" secondItem="a8m-Aw-EZa" secondAttribute="centerX" id="yNd-Ue-BfH"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="sfB-GZ-3Rn">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="n7f-qj-Qva">
+                            <connections>
+                                <segue destination="iPB-A3-g6M" kind="unwind" identifier="Save" unwindAction="unwindToListNotesViewController:" id="5jL-jo-Rvh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OOS-aw-XdO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="iPB-A3-g6M" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1691" y="1317"/>
         </scene>
