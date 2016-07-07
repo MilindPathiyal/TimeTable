@@ -14,7 +14,6 @@ class DayTableViewController: UIViewController {
     var dayTitle = ""
     var tempDayEnum = Day(rawValue:"Monday")!
     var tasks: Results<DayTask>!{
-        // add property observer
         didSet {
             tableView.reloadData()
         }
@@ -23,13 +22,17 @@ class DayTableViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = dayTitle
+        print()
         tempDayEnum = Day(rawValue:dayTitle)!
         tasks = RealmHelper.retrieveTask(tempDayEnum)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let identifier = segue.identifier {
-                
+            let newEventViewController = segue.destinationViewController as! NewEventViewController
+            if identifier == "addTask" {
+                newEventViewController.dayEnum = tempDayEnum
+            }
         }
     }
     

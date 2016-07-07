@@ -10,9 +10,13 @@ import UIKit
 
 class NewEventViewController: UIViewController {
 
+    @IBOutlet weak var taskTitleTextField: UITextField!
+    @IBOutlet weak var taskStartTimePicker: UIDatePicker!
+    @IBOutlet weak var taskStopTimePicker: UIDatePicker!
+    
+    var dayEnum = Day.Monday;
+    
     @IBAction func didEndOnExit(sender: UITextField) {
-        
-        
         sender.resignFirstResponder()
     }
     @IBAction func textFieldDidEndEditing(sender: UITextField) {
@@ -51,10 +55,11 @@ class NewEventViewController: UIViewController {
             // if note exists, update title and content
 
                 // if note does not exist, create new note
-                let task = Task()
-                task.title = noteTitleTextField.text ?? ""
-                task.content = noteContentTextView.text ?? ""
-                task.modificationTime = NSDate()
+                let task = DayTask()
+                task.title = taskTitleTextField.text ?? ""
+                task.startTime = taskStartTimePicker. ?? ""
+                task.endTime = taskStartTimePicker.text ?? ""
+                task.dayEnum = dayEnum
                 RealmHelper.addTask(task)
             dayTableViewController.tasks = RealmHelper.retrieveTask()
         }

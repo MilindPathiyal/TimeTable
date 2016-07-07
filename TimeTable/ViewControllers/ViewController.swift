@@ -15,8 +15,7 @@ class CollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //performSegueWithIdentifier("showDayTasks", sender: nil)
-        
+        //performSegueWithIdentifier("showDayTasks", sender: nil)        
         daysArray = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday", "[INSERT JOKE]"]
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -26,7 +25,7 @@ class CollectionViewController: UICollectionViewController {
         // Dispose of any resources that can be recreated.
     }
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 8
+        return 7
     }
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
