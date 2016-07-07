@@ -15,7 +15,8 @@ class NewEventViewController: UIViewController {
     @IBOutlet weak var taskStartTimePicker: UIDatePicker!
     @IBOutlet weak var taskEndTimePicker: UIDatePicker!
     
-    var dayEnum = Day.Monday;
+    var dayEnum = Day.Monday
+    var color = ""
     
     @IBAction func didEndOnExit(sender: UITextField) {
         sender.resignFirstResponder()
@@ -46,9 +47,14 @@ class NewEventViewController: UIViewController {
             task.startTime = taskStartTimePicker.date
             task.endTime = taskEndTimePicker.date
             task.dayEnum = dayEnum
+            task.color = color
             RealmHelper.addTask(task)
             dayTableViewController.tasks = RealmHelper.retrieveTask(dayEnum)
         }
+    }
+    
+    @IBAction func unwindToNewEventViewController(segue: UIStoryboardSegue) {
+        
     }
     
 }

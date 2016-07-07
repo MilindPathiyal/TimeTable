@@ -22,6 +22,7 @@
 		FA62A4061D2EC2FF00F5AC06 /* ListTasksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62A4051D2EC2FF00F5AC06 /* ListTasksTableViewCell.swift */; };
 		FA62A4091D2ECAA300F5AC06 /* NSDate+convertToString.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62A4081D2ECAA300F5AC06 /* NSDate+convertToString.swift */; };
 		FA62A40C1D2ED22D00F5AC06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA62A40A1D2ED22D00F5AC06 /* Main.storyboard */; };
+		FA62A40E1D2F0EC600F5AC06 /* TaskColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA62A40D1D2F0EC600F5AC06 /* TaskColorPickerViewController.swift */; };
 		FAE322B81D2D77A90058786D /* DayTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE322B71D2D77A90058786D /* DayTask.swift */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,7 @@
 		FA62A4051D2EC2FF00F5AC06 /* ListTasksTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTasksTableViewCell.swift; sourceTree = "<group>"; };
 		FA62A4081D2ECAA300F5AC06 /* NSDate+convertToString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+convertToString.swift"; sourceTree = "<group>"; };
 		FA62A40B1D2ED22D00F5AC06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FA62A40D1D2F0EC600F5AC06 /* TaskColorPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskColorPickerViewController.swift; sourceTree = "<group>"; };
 		FAD862201D2D75DA00626DC7 /* DayTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayTableViewController.swift; sourceTree = "<group>"; };
 		FAE322B71D2D77A90058786D /* DayTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayTask.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -219,6 +221,7 @@
 				FAD862201D2D75DA00626DC7 /* DayTableViewController.swift */,
 				F9BC77871D2D65E10039C415 /* ViewController.swift */,
 				F9A1239D1D2DD24A00913BFE /* NewEventViewController.swift */,
+				FA62A40D1D2F0EC600F5AC06 /* TaskColorPickerViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -494,6 +497,7 @@
 				FA62A4061D2EC2FF00F5AC06 /* ListTasksTableViewCell.swift in Sources */,
 				F9A1239E1D2DD24B00913BFE /* NewEventViewController.swift in Sources */,
 				F9BC77861D2D65E10039C415 /* AppDelegate.swift in Sources */,
+				FA62A40E1D2F0EC600F5AC06 /* TaskColorPickerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

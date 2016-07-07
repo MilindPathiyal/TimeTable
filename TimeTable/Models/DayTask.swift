@@ -24,7 +24,7 @@ class DayTask: Object {
     dynamic var title = ""
     dynamic var startTime = NSDate()
     dynamic var endTime = NSDate()
-    dynamic var color = CGFloat(100)/255
+    dynamic var color = ""
 }
 
 enum Day: String {
