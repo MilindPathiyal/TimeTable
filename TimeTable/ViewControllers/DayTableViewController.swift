@@ -9,16 +9,17 @@
 import UIKit
 
 class DayTableViewController: UIViewController {
-    
-    var tasks: [DayTask] = []{
-        // add property observer
-        didSet {
-            //tableView.reloadData()
-        }
-    }
+    var dayTitle = ""
+//    var tasks = [DayTask]{
+//        // add property observer
+//        didSet {
+//            //tableView.reloadData()
+//        }
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = dayTitle
         //tasks = RealmHelper.retrieveNotes()
     }
     

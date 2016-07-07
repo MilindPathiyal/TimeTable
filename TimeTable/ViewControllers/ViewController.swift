@@ -9,19 +9,18 @@
 import UIKit
 
 class CollectionViewController: UICollectionViewController {
-
-    var Array = [String]()
+    
+    var daysArray = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         //performSegueWithIdentifier("showDayTasks", sender: nil)
-
-        Array = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday", "[INSERT JOKE]"]
-
+        
+        daysArray = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday", "[INSERT JOKE]"]
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -34,20 +33,31 @@ class CollectionViewController: UICollectionViewController {
         var cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as UICollectionViewCell
         
         
-       var Button = cell.viewWithTag(1) as! UILabel
-       Button.text = Array[indexPath.row]
+        var Button = cell.viewWithTag(1) as! UILabel
+        Button.text = daysArray[indexPath.row]
+        
         return cell
     }
-
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let identifier = segue.identifier {
+            if identifier == "showDayTasks" {
+                let cell = sender as! UICollectionViewCell
+                let indexPath = self.collectionView!.indexPathForCell(cell)
+                let dayTasksViewController = segue.destinationViewController as! DayTableViewController
+                dayTasksViewController.dayTitle = daysArray[(indexPath?.row)!]
+            }
+        }
+    }
     
     @IBAction func unwindToListNotesViewController(segue: UIStoryboardSegue) {
         if let identifier = segue.identifier {
             if identifier == "Back" {
-                print("Back")
+                
             }
         }
         
     }
-
+    
 }
 

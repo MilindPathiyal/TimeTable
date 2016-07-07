@@ -8,8 +8,9 @@
 
 import Foundation
 import UIKit
+import RealmSwift
 
-class DayTask {
+class DayTask: Object {
     var isChecked = false
     var title = ""
     var startTime = ""

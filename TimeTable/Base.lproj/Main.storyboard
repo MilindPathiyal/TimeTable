@@ -38,12 +38,6 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mYg-dG-yUL">
-                                            <rect key="frame" x="0.0" y="0.0" width="141" height="125"/>
-                                            <connections>
-                                                <segue destination="Bnj-rh-TAm" kind="show" id="hpd-wG-YXs"/>
-                                            </connections>
-                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
@@ -56,7 +50,7 @@
                                     <constraint firstItem="fJP-Z6-Bjg" firstAttribute="leading" secondItem="aCF-PN-Pnp" secondAttribute="leading" id="vdh-Eu-5Ls"/>
                                 </constraints>
                                 <connections>
-                                    <segue destination="Bnj-rh-TAm" kind="show" identifier="showDayTasks" id="tUE-tL-BuE"/>
+                                    <segue destination="Bnj-rh-TAm" kind="show" identifier="showDayTasks" id="QMv-VM-vXG"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -210,7 +204,4 @@
     <resources>
         <image name="background-1142632_960_720" width="960" height="720"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="tUE-tL-BuE"/>
-    </inferredMetricsTieBreakers>
 </document>
