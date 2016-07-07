@@ -70,7 +70,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4o7-rD-7qO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1051" y="490"/>
+            <point key="canvasLocation" x="987" y="490"/>
         </scene>
         <!--DayNameSpace-->
         <scene sceneID="3Ha-6w-clj">
@@ -136,11 +136,19 @@
                                                     </attributedString>
                                                     <color key="highlightedColor" red="0.85847235580000003" green="0.31082427530000001" blue="0.33494402290000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qIZ-aF-QGn">
+                                                    <rect key="frame" x="550" y="18" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="hNM-a3-H2k" secondAttribute="trailingMargin" id="8hK-nW-wiO"/>
+                                                <constraint firstItem="qIZ-aF-QGn" firstAttribute="centerY" secondItem="hNM-a3-H2k" secondAttribute="centerY" id="Drl-tC-uLT"/>
                                                 <constraint firstAttribute="centerY" secondItem="hNM-a3-H2k" secondAttribute="centerY" id="Eoe-Pj-i50"/>
                                                 <constraint firstItem="S9f-OV-zvL" firstAttribute="centerY" secondItem="hNM-a3-H2k" secondAttribute="centerY" id="Hmw-qS-7cW"/>
+                                                <constraint firstItem="qIZ-aF-QGn" firstAttribute="trailing" secondItem="hNM-a3-H2k" secondAttribute="trailingMargin" id="kyF-lT-L7w"/>
                                                 <constraint firstItem="S9f-OV-zvL" firstAttribute="leading" secondItem="Lw1-wY-M40" secondAttribute="trailing" constant="9" id="lNn-88-hj5"/>
                                                 <constraint firstItem="Lw1-wY-M40" firstAttribute="leading" secondItem="hNM-a3-H2k" secondAttribute="leadingMargin" id="oVx-d6-cFD"/>
                                                 <constraint firstItem="Lw1-wY-M40" firstAttribute="centerY" secondItem="hNM-a3-H2k" secondAttribute="centerY" id="ph3-vb-3EI"/>
@@ -149,6 +157,7 @@
                                         <color key="backgroundColor" red="1" green="0.99563743034828034" blue="0.9599181079937994" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="taskCheckbox" destination="Lw1-wY-M40" id="WOk-VS-8s1"/>
+                                            <outlet property="taskStartTimeLabel" destination="qIZ-aF-QGn" id="O2N-aG-LQd"/>
                                             <outlet property="taskTitleLabel" destination="S9f-OV-zvL" id="lxs-Ld-lkQ"/>
                                         </connections>
                                     </tableViewCell>
@@ -176,7 +185,7 @@
                         <barButtonItem key="leftBarButtonItem" title="Back" id="5gR-0i-5lf">
                             <color key="tintColor" red="0.74117647060000003" green="0.20000000000000001" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <segue destination="NPB-Bz-MQG" kind="unwind" identifier="Back" unwindAction="unwindToListNotesViewController:" id="8g2-Mh-qYl"/>
+                                <segue destination="Cx0-7o-9Do" kind="unwind" unwindAction="unwindToViewController:" id="XAR-v9-uka"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="wfa-0m-xVB">
@@ -191,7 +200,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="duh-5r-UyY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="NPB-Bz-MQG" userLabel="Exit" sceneMemberID="exit"/>
+                <exit id="Cx0-7o-9Do" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1691" y="490"/>
         </scene>
@@ -315,13 +324,13 @@
                     <navigationItem key="navigationItem" title="Title" id="sfB-GZ-3Rn">
                         <barButtonItem key="rightBarButtonItem" title="Save" id="n7f-qj-Qva">
                             <connections>
-                                <segue destination="iPB-A3-g6M" kind="unwind" identifier="Save" unwindAction="unwindToListNotesViewController:" id="5jL-jo-Rvh"/>
+                                <segue destination="iPB-A3-g6M" kind="unwind" identifier="Save" unwindAction="unwindToDayTableViewController:" id="LxZ-Gf-Vom"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="taskEndTimePicker" destination="Sd3-2P-pbz" id="lhU-1B-BIe"/>
                         <outlet property="taskStartTimePicker" destination="3zq-eL-gXU" id="4sP-Fs-ljU"/>
-                        <outlet property="taskStopTimePicker" destination="Sd3-2P-pbz" id="R1j-2c-NPe"/>
                         <outlet property="taskTitleTextField" destination="wL7-Mi-52T" id="9Ny-Qu-Qbt"/>
                     </connections>
                 </viewController>

@@ -7,62 +7,48 @@
 //
 
 import UIKit
+import RealmSwift
 
 class NewEventViewController: UIViewController {
-
+    
     @IBOutlet weak var taskTitleTextField: UITextField!
     @IBOutlet weak var taskStartTimePicker: UIDatePicker!
-    @IBOutlet weak var taskStopTimePicker: UIDatePicker!
+    @IBOutlet weak var taskEndTimePicker: UIDatePicker!
     
     var dayEnum = Day.Monday;
     
     @IBAction func didEndOnExit(sender: UITextField) {
         sender.resignFirstResponder()
     }
+    
     @IBAction func textFieldDidEndEditing(sender: UITextField) {
         
         sender.resignFirstResponder()
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let dayTableViewController = segue.destinationViewController as! DayTableViewController
         if segue.identifier == "Save" {
-            //            if let note = note {
-            //                // 1
-            //                note.title = noteTitleTextField.text ?? ""
-            //                note.content = noteContentTextView.text ?? ""
-            //                // 2
-            //                listNotesTableViewController.tableView.reloadData()
-            //            } else {
-            //                // 3
-            //                let newNote = Note()
-            //                newNote.title = noteTitleTextField.text ?? ""
-            //                newNote.content = noteContentTextView.text ?? ""
-            //                newNote.modificationTime = NSDate()
-            //                listNotesTableViewController.notes.append(newNote)
-            //            }
+            let dayTableViewController = segue.destinationViewController as! DayTableViewController
+            let formatter = NSDateFormatter();
+            formatter.dateFormat = "HH:mm";
             
-            // if note exists, update title and content
-
-                // if note does not exist, create new note
-                let task = DayTask()
-                task.title = taskTitleTextField.text ?? ""
-                task.startTime = taskStartTimePicker. ?? ""
-                task.endTime = taskStartTimePicker.text ?? ""
-                task.dayEnum = dayEnum
-                RealmHelper.addTask(task)
-            dayTableViewController.tasks = RealmHelper.retrieveTask()
+            let task = DayTask()
+            task.title = taskTitleTextField.text ?? ""
+            task.startTime = taskStartTimePicker.date
+            task.endTime = taskEndTimePicker.date
+            task.dayEnum = dayEnum
+            RealmHelper.addTask(task)
+            dayTableViewController.tasks = RealmHelper.retrieveTask(dayEnum)
         }
     }
-
+    
 }

@@ -22,20 +22,26 @@ class DayTableViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = dayTitle
-        print()
         tempDayEnum = Day(rawValue:dayTitle)!
         tasks = RealmHelper.retrieveTask(tempDayEnum)
+        print(tasks.count)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let identifier = segue.identifier {
-            let newEventViewController = segue.destinationViewController as! NewEventViewController
             if identifier == "addTask" {
+                let newEventViewController = segue.destinationViewController as! NewEventViewController
                 newEventViewController.dayEnum = tempDayEnum
-            }
+            } 
         }
     }
     
+    @IBAction func unwindToDayTableViewController(segue: UIStoryboardSegue) {
+        
+        // for now, simply defining the method is sufficient.
+        // we'll add code later
+        
+    }
 }
 
 extension DayTableViewController: UITableViewDataSource {
@@ -61,7 +67,9 @@ extension DayTableViewController: UITableViewDataSource {
         } else {
             cell.taskCheckbox.setCheckState(.Unchecked, animated: true)
         }
-        cell.taskStartTimeLabel.text = task.startTime.convertToString()
+        let formatter = NSDateFormatter();
+        formatter.dateFormat = "HH:mm";
+        cell.taskStartTimeLabel.text = formatter.stringFromDate(task.startTime)
         
         return cell
     }

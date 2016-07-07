@@ -15,3 +15,4 @@ class ListTasksTableViewCell: UITableViewCell {
     @IBOutlet weak var taskCheckbox: M13Checkbox!
     @IBOutlet weak var taskStartTimeLabel: UILabel!
 }
+

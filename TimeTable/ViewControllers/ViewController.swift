@@ -49,14 +49,11 @@ class CollectionViewController: UICollectionViewController {
         }
     }
     
-    @IBAction func unwindToListNotesViewController(segue: UIStoryboardSegue) {
-        if let identifier = segue.identifier {
-            if identifier == "Back" {
-                
-            }
-        }
+    @IBAction func unwindToViewController(segue: UIStoryboardSegue) {
+        
+        // for now, simply defining the method is sufficient.
+        // we'll add code later
         
     }
-    
 }
 
