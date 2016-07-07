@@ -299,6 +299,7 @@
 				TargetAttributes = {
 					F9BC77811D2D65E10039C415 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = L5W7NM928E;
 					};
 					F9BC77951D2D65E10039C415 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -635,10 +636,13 @@
 			baseConfigurationReference = 0BD6C91A8A165D3F6400F84B /* Pods-TimeTable.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TimeTable/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Milindian.TimeTable;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -647,10 +651,13 @@
 			baseConfigurationReference = AC9AF10CCBFA3253A4E3FB98 /* Pods-TimeTable.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TimeTable/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Milindian.TimeTable;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
