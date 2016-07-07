@@ -16,7 +16,7 @@ class CollectionViewController: UICollectionViewController {
         super.viewDidLoad()
         
         //performSegueWithIdentifier("showDayTasks", sender: nil)        
-        daysArray = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday", "[INSERT JOKE]"]
+        daysArray = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
         // Do any additional setup after loading the view, typically from a nib.
     }
     
