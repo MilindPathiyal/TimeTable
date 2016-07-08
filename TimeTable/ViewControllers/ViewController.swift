@@ -10,12 +10,26 @@ import UIKit
 
 class CollectionViewController: UICollectionViewController {
     
+    
+    
     var daysArray = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //performSegueWithIdentifier("showDayTasks", sender: nil)        
+        let imageData = NSData(contentsOfURL: NSBundle.mainBundle().URLForResource("5", withExtension: "gif")!)
+        let imageGif = UIImage.gifWithData(imageData!)
+        
+        let imageView = UIImageView(image: imageGif)
+        imageView.frame = CGRect(x:0.0, y:0.0, width:600.0, height:600.0)
+        imageView.alpha = 1
+        view.addSubview(imageView)
+        
+        self.view.bringSubviewToFront(self.collectionView!)
+        
+        self.collectionView!.backgroundColor = UIColor.clearColor()
+        
+        //performSegueWithIdentifier("showDayTasks", sender: nil)
         daysArray = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
         // Do any additional setup after loading the view, typically from a nib.
     }

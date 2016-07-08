@@ -10,6 +10,13 @@
 		2114CF8F73128178ED50F014 /* Pods_TimeTable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A498D4F77544EF3F7033999C /* Pods_TimeTable.framework */; };
 		9DC71EAC396FE9F566CAEDCD /* Pods_TimeTableTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD3183778E68008CFA44BD4 /* Pods_TimeTableTests.framework */; };
 		E8CC9A3C1F4C5A5C7B7EF116 /* Pods_TimeTableUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4337F5D7141292A09CCF1266 /* Pods_TimeTableUITests.framework */; };
+		F96827661D3017C30043E79B /* gifFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96827651D3017C30043E79B /* gifFramework.swift */; };
+		F968276C1D3020EE0043E79B /* 1.gif in Resources */ = {isa = PBXBuildFile; fileRef = F968276B1D3020EE0043E79B /* 1.gif */; };
+		F96827751D3024980043E79B /* 4.gif in Resources */ = {isa = PBXBuildFile; fileRef = F96827701D3024980043E79B /* 4.gif */; };
+		F96827761D3024980043E79B /* 5.gif in Resources */ = {isa = PBXBuildFile; fileRef = F96827711D3024980043E79B /* 5.gif */; };
+		F968277C1D303DC40043E79B /* 3.gif in Resources */ = {isa = PBXBuildFile; fileRef = F968277B1D303DC40043E79B /* 3.gif */; };
+		F968277E1D303DEB0043E79B /* 2.gif in Resources */ = {isa = PBXBuildFile; fileRef = F968277D1D303DEB0043E79B /* 2.gif */; };
+		F96827801D303DEF0043E79B /* 7.gif in Resources */ = {isa = PBXBuildFile; fileRef = F968277F1D303DEF0043E79B /* 7.gif */; };
 		F9A1239E1D2DD24B00913BFE /* NewEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A1239D1D2DD24A00913BFE /* NewEventViewController.swift */; };
 		F9BC77861D2D65E10039C415 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BC77851D2D65E10039C415 /* AppDelegate.swift */; };
 		F9BC778D1D2D65E10039C415 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9BC778C1D2D65E10039C415 /* Assets.xcassets */; };
@@ -53,6 +60,14 @@
 		7DD3183778E68008CFA44BD4 /* Pods_TimeTableTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeTableTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A498D4F77544EF3F7033999C /* Pods_TimeTable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeTable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC9AF10CCBFA3253A4E3FB98 /* Pods-TimeTable.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeTable.release.xcconfig"; path = "Pods/Target Support Files/Pods-TimeTable/Pods-TimeTable.release.xcconfig"; sourceTree = "<group>"; };
+		F96827651D3017C30043E79B /* gifFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = gifFramework.swift; path = ../../../../gifFramework.swift; sourceTree = "<group>"; };
+		F96827671D3017DD0043E79B /* gifFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = gifFramework.swift; path = ../../../gifFramework.swift; sourceTree = "<group>"; };
+		F968276B1D3020EE0043E79B /* 1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 1.gif; path = ../../../1.gif; sourceTree = "<group>"; };
+		F96827701D3024980043E79B /* 4.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 4.gif; path = ../../../4.gif; sourceTree = "<group>"; };
+		F96827711D3024980043E79B /* 5.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 5.gif; path = ../../../5.gif; sourceTree = "<group>"; };
+		F968277B1D303DC40043E79B /* 3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 3.gif; path = ../../../3.gif; sourceTree = "<group>"; };
+		F968277D1D303DEB0043E79B /* 2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 2.gif; path = ../../../2.gif; sourceTree = "<group>"; };
+		F968277F1D303DEF0043E79B /* 7.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 7.gif; path = ../../../7.gif; sourceTree = "<group>"; };
 		F9A1239D1D2DD24A00913BFE /* NewEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewEventViewController.swift; sourceTree = "<group>"; };
 		F9BC77821D2D65E10039C415 /* TimeTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9BC77851D2D65E10039C415 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -157,8 +172,15 @@
 				FAE322BC1D2D80140058786D /* Views */,
 				FAE322B61D2D77870058786D /* Models */,
 				F9BC77851D2D65E10039C415 /* AppDelegate.swift */,
+				F96827671D3017DD0043E79B /* gifFramework.swift */,
 				FA62A40A1D2ED22D00F5AC06 /* Main.storyboard */,
 				F9BC778C1D2D65E10039C415 /* Assets.xcassets */,
+				F968276B1D3020EE0043E79B /* 1.gif */,
+				F96827701D3024980043E79B /* 4.gif */,
+				F968277B1D303DC40043E79B /* 3.gif */,
+				F968277F1D303DEF0043E79B /* 7.gif */,
+				F968277D1D303DEB0043E79B /* 2.gif */,
+				F96827711D3024980043E79B /* 5.gif */,
 				F9BC778E1D2D65E10039C415 /* LaunchScreen.storyboard */,
 				F9BC77911D2D65E10039C415 /* Info.plist */,
 			);
@@ -202,6 +224,7 @@
 		FAE322B61D2D77870058786D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F96827651D3017C30043E79B /* gifFramework.swift */,
 				FAE322B71D2D77A90058786D /* DayTask.swift */,
 			);
 			path = Models;
@@ -339,8 +362,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F96827751D3024980043E79B /* 4.gif in Resources */,
 				FA62A40C1D2ED22D00F5AC06 /* Main.storyboard in Resources */,
+				F968277E1D303DEB0043E79B /* 2.gif in Resources */,
+				F968277C1D303DC40043E79B /* 3.gif in Resources */,
+				F96827761D3024980043E79B /* 5.gif in Resources */,
+				F96827801D303DEF0043E79B /* 7.gif in Resources */,
 				F9BC77901D2D65E10039C415 /* LaunchScreen.storyboard in Resources */,
+				F968276C1D3020EE0043E79B /* 1.gif in Resources */,
 				F9BC778D1D2D65E10039C415 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -490,6 +519,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9BC77BB1D2DAEF40039C415 /* DayTableViewController.swift in Sources */,
+				F96827661D3017C30043E79B /* gifFramework.swift in Sources */,
 				F9BC77BA1D2DAEF20039C415 /* ViewController.swift in Sources */,
 				FAE322B81D2D77A90058786D /* DayTask.swift in Sources */,
 				FA62A4041D2E16EE00F5AC06 /* RealmHelper.swift in Sources */,
