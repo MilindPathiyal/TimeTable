@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import M13Checkbox
 
 class DayTableViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
@@ -52,7 +53,6 @@ extension DayTableViewController: UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("listTasksTableViewCell", forIndexPath: indexPath) as! ListTasksTableViewCell
         
-        //cell.taskTitleLabel.text = "Task"
         cell.taskCheckbox.animationDuration = NSTimeInterval(Float(0.3))
         
         let row = indexPath.row
@@ -78,6 +78,12 @@ extension DayTableViewController: UITableViewDataSource {
             RealmHelper.deleteTask(tasks[indexPath.row])
             tasks = RealmHelper.retrieveTask(tempDayEnum)
         }
+    }
+    
+    @IBAction func checkBoxTapped(sender: AnyObject) {
+        let checkbox = sender as! M13Checkbox
+        print(checkbox.checkState)
+        
     }
     
     func hexStringToUIColor (hex:String) -> UIColor {

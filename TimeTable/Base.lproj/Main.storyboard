@@ -246,12 +246,13 @@
                                         <rect key="frame" x="0.0" y="192" width="600" height="57"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6P6-6c-u28" id="hNM-a3-H2k">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="56"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="56.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lw1-wY-M40" customClass="M13Checkbox" customModule="M13Checkbox">
                                                     <rect key="frame" x="8" y="6" width="44" height="44"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="tintColor" red="1" green="0.43529411759999997" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="44" id="6al-b7-0KZ"/>
                                                         <constraint firstAttribute="width" constant="44" id="EXd-cR-Yzp"/>
@@ -273,6 +274,9 @@
                                                             <color key="value" red="0.85847235580000003" green="0.31082427530000001" blue="0.33494402290000003" alpha="1" colorSpace="calibratedRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="checkBoxTapped:" destination="Bnj-rh-TAm" eventType="valueChanged" id="0zA-Fk-iEu"/>
+                                                    </connections>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S9f-OV-zvL">
                                                     <rect key="frame" x="60" y="17" width="57" height="31"/>
