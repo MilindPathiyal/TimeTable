@@ -25,6 +25,13 @@ class RealmHelper {
         }
     }
     
+    static func updateTaskIsChecked(taskToBeUpdated: DayTask, isChecked: Bool) {
+        let realm = try! Realm()
+        try! realm.write() {
+            taskToBeUpdated.isChecked = isChecked
+        }
+    }
+    
     static func retrieveTask(day:Day) -> Results<DayTask> {
         let realm = try! Realm()
         return realm.objects(DayTask).filter("day = '\(day.rawValue)'").sorted("startTime", ascending: true)

@@ -58,7 +58,7 @@ extension DayTableViewController: UITableViewDataSource {
         let row = indexPath.row
         
         let task = tasks[row]
-        
+        cell.taskCheckbox.tag = indexPath.row
         cell.taskTitleLabel.text = task.title
         cell.backgroundColor = hexStringToUIColor(task.color)
         if task.isChecked{
@@ -82,8 +82,7 @@ extension DayTableViewController: UITableViewDataSource {
     
     @IBAction func checkBoxTapped(sender: AnyObject) {
         let checkbox = sender as! M13Checkbox
-        print(checkbox.checkState)
-        
+        RealmHelper.updateTaskIsChecked(tasks[checkbox.tag], isChecked: checkbox.checkState == .Checked)
     }
     
     func hexStringToUIColor (hex:String) -> UIColor {
